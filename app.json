@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "HealthRoute",
+    "slug": "HealthRoute",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo_hr.png",
+    "scheme": "healthroute",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "vinhasouza.dev.healthroute",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/logo_hr.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d8aa59ad-6d3d-4e6e-8d0f-a1e4d7ab7012"
+      }
+    }
+  }
+}

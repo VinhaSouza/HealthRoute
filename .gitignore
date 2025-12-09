@@ -1,0 +1,34 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+package-lock.json
+yarn.lock
+
+# Expo
+.expo/
+.expo-shared/
+web-build/
+dist/
+
+# Android
+android/.gradle/
+android/app/build/
+*.keystore
+
+# iOS
+ios/Pods/
+ios/build/
+
+# Env
+.env
+.env.*.local
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
