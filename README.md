@@ -1,50 +1,92 @@
-# Welcome to your Expo app 👋
+# HealthRoute
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+HealthRoute é um aplicativo móvel desenvolvido com **React Native + Expo**, voltado para gerenciamento de domicílios, agendamento de visitas e acompanhamento de moradores.  
 
-## Get started
+O aplicativo utiliza **Firebase** para autenticação e armazenamento de dados e inclui funcionalidades como:
+- Cadastro e edição de domicílios.
+- Cadastro, edição e remoção de moradores.
+- Agendamento e acompanhamento de visitas.
+- Dashboard de status de visitas pendentes e concluídas.
+- Tela de mapa para visualização de domicílios.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 💻 Tecnologias utilizadas
 
-2. Start the app
+- React Native
+- Expo (SDK 48+)
+- Firebase (Firestore + Auth)
+- EAS Build (para gerar APK)
+- TailwindCSS / StyleSheet React Native
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🚀 Instalação
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Pré-requisitos
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Node.js LTS (18 ou 20)
+- npm ou yarn
+- Expo CLI local (vem junto com `expo` no projeto)
+- Conta na [Expo](https://expo.dev/)
+- Conta no [Firebase](https://firebase.google.com/)
 
-## Get a fresh project
+---
 
-When you're ready, run:
-
+##  Instalando Dependências
 ```bash
-npm run reset-project
+npm install
+# ou
+yarn install
+```
+---
+## Configurar Firebase
+
+Crie um arquivo .env na raiz do projeto com as credenciais do seu projeto Firebase:
+
+FIREBASE_API_KEY=...
+FIREBASE_AUTH_DOMAIN=...
+FIREBASE_PROJECT_ID=...
+FIREBASE_STORAGE_BUCKET=...
+FIREBASE_MESSAGING_SENDER_ID=...
+FIREBASE_APP_ID=...
+
+No arquivo src/services/firebase.js, certifique-se de importar essas variáveis
+
+---
+## 📱 Rodar o projeto local
+```bash
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Vai abrir o Expo Dev Tools no navegador.
 
-## Learn more
+Escaneie o QR code com o Expo Go no celular para testar
 
-To learn more about developing your project with Expo, look at the following resources:
+---
+## 📦 Build para Android (APK)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Instale o EAS CLI localmente:
 
-## Join the community
+npm install --save-dev eas-cli
 
-Join our community of developers creating universal apps.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Faça login na sua conta Expo:
+
+npx eas login
+
+
+Inicie o build:
+
+npx eas build --platform android --profile preview
+
+
+Siga as instruções para criar um keystore ou usar o remoto.
+
+Após concluído, você receberá um link para baixar o APK.
+
+### Clonar o projeto
+
+```bash
+git clone https://github.com/VinhaSouza/HealthRoute.git
+cd HealthRoute
